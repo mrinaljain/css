@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Hamburger</title>
+	<style>
+		body{
+			background-color: orange;
+		}
+		.icon{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+			width: 300px;
+			height: 300px;
+			/*background-color: #000000;*/
+			transition: .5s;
+			cursor: pointer;
+		}
+		.hamburger{
+			width: 150px;
+			height: 10px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+			background-color: #fff;
+			transition: .5s;
+			box-shadow: 0 2px 2px #000000;
+		}
+		.hamburger:after , .hamburger:before{
+			content: "";
+			position: absolute;
+			width: 150px;
+			height: 10px;
+			background-color: #fff;
+			transition: .5s;
+			box-shadow: 0 2px 2px #000000;
+		}
+		.hamburger:before{
+			top: -40px;
+		}
+		.hamburger:after{
+			top: 40px;
+		}
+		.icon.active .hamburger{
+			background-color: orange;
+			box-shadow: none;
+		}
+		.icon.active .hamburger:after{
+			transform: rotate(-225deg);
+			top: 0px;
+		}
+		.icon.active .hamburger:before{
+			transform: rotate(225deg);
+			top: 0px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('body').on('mouseenter','.icon' , function(){
+				$(this).toggleClass('active');
+			}).on('mouseleave', '.icon' , function(){
+				$(this).toggleClass('active');
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="icon">
+		<div class="hamburger"></div>
+	</div>
+</body>
+</html>

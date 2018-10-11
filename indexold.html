@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin:0px;
+			padding: 0px;
+			background-color: #000;
+		}
+		.shadow{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+			width: 400px;
+			height: 200px;
+			background: linear-gradient(0deg,#000,#262626);
+		}
+		.shadow:before{
+			content: "";
+			position: absolute;
+			left: -2px;
+			top: -2px;
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+			background-size: 400%;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<div class="shadow"></div>
+</body>
+</html>
