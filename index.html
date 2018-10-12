@@ -1,51 +1,242 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Welcome Page</title>
-    <link rel="icon" href="https://s3.amazonaws.com/my-tss/assets_pwa_new/images/favicon.ico">
-    <meta name="description" content="Put your description here.">
-    <meta name="author" content="Mrinal Jain">
-    <meta name="theme-color" content="#046FC2">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <!-- customize css -->
-  <!--  <link rel="stylesheet" href="assets/css/static_pages.css"> -->
-   <!-- Compiled and minified CSS -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <style type="text/css">
-      
-  </style>
-</head>
-<body>
-    <div class="container-fluid text-center center-align" style="width:100vw;height: 100vh;background-image: url(https://cdn.wittyfeed.com/assets_pwa_new/images/profile_background.png);background-color: #f3f5f8;">
-        <div class="row">
-            <div class="col s11 l6 vtpl-profile-card" style="background-color: #fff;border-radius: 40px;position: absolute;box-shadow: 0px 2px 4px rgba(0,0,0,0.5);padding: 35px 15px 35px 15px;display: flex;justify-content: center;flex-direction: column;margin: auto;top: 50%;left: 50%;transform: translate(-50% , -50%);">
-                <div class="col s12">    
-                
-                    <img class="responsive-img" src="https://cdn.wittyfeed.com/assets_pwa_new/images/wittysvg.svg" width="75%">
-                </div>
-                <div class="col s12" style="margin: 50px auto;">
-                    
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 742.767 157.157">
-  <defs>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <style>
-      .cls-1 {
-        fill: #046fc2;
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+      html,
+      body {
+        background-color: #a9d7d1;
+        text-align: center;
+        font-family: 'Raleway', Helvetica, sans-serif;
+        min-width: 320px;
+      }
+
+      header {
+        font-size: 2em;
+        font-weight: bold;
+        margin: 20px;
+      }
+
+      #form-outer {
+        background-color: rgb(250, 250, 250);
+        margin: 0 auto;
+        border-radius: 4px;
+        width: 75%;
+        max-width: 900px;
+        padding: 10px;
+        padding-top: 20px;
+      }
+
+      .labels {
+        display: inline-block;
+        text-align: right;
+        width: 40%;
+        padding: 5px;
+        vertical-align: top;
+        margin-top: 10px;
+      }
+
+      .rightTab {
+        display: inline-block;
+        text-align: left;
+        width: 48%;
+        vertical-align: middle;
+      }
+
+      .input-field {
+        height: 20px;
+        width: 280px;
+        padding: 5px;
+        margin: 10px;
+        border: 1px solid #c0c0c0;
+        border-radius: 2px;
+      }
+
+      #userAge {
+        width: 40px;
+      }
+
+      .userRatings,
+      input[type="checkbox"] {
+        float: left;
+        margin-right: 5px;
+      }
+
+      #submit {
+        background-color: #59ace0;
+        border-radius: 4px;
+        color: white;
+        font-size: 1em;
+        height: 40px;
+        width: 96px;
+        margin: 10px;
+        border: 0px solid;
+      }
+
+      .dropdown {
+        height: 35px;
+        width: 140px;
+        padding: 5px;
+        margin: 10px;
+        margin-top: 15px;
+        border: 1px solid #c0c0c0;
+        border-radius: 2px;
+      }
+
+      .radio, .checkbox {
+        position: relative;
+        left: -43px;
+        margin-left: 10px;
+        display: block;
+        padding-bottom: 10px;
+      }
+
+      @media screen and (max-width: 833px) {
+        .input-field {
+          width: 80%;
+        }
+        select {
+          width: 90%;
+        }
+      }
+
+      @media screen and (max-width: 520px) {
+        .labels {
+          width: 100%;
+          text-align: left;
+        }
+        .rightTab {
+          width: 80%;
+          float: left;
+        }
+        .input-field {
+          width: 100%;
+        }
+        select {
+          width: 100%;
+        }
       }
     </style>
-  </defs>
-  <path id="Path_27" data-name="Path 27" class="cls-1" d="M-321.928-51.5q-.942-1.884-1.806-3.689t-1.805-3.689h13.031q4.553,9.891,9.813,19.861a138.115,138.115,0,0,1,8.714,20.174,138.109,138.109,0,0,1,8.714-20.174q5.259-9.97,9.813-19.861h13.031q-8.007,15.7-15.778,31.243T-293.982,3.611q-5.338-10.676-10.676-21.117t-10.676-21.117q-5.338,10.676-10.676,21.117T-336.686,3.611q-8.007-15.7-15.779-31.243t-15.779-31.243h13.031q4.553,9.891,9.813,19.861a138.115,138.115,0,0,1,8.714,20.174A117.079,117.079,0,0,1-329.7-35.4Q-325.539-43.489-321.928-51.5Zm74.1-30.144a7.825,7.825,0,0,1,2.512-5.966,8.058,8.058,0,0,1,5.652-2.355,7.886,7.886,0,0,1,5.5,2.355,7.825,7.825,0,0,1,2.512,5.966,7.58,7.58,0,0,1-2.512,5.888,8.022,8.022,0,0,1-5.5,2.276,8.2,8.2,0,0,1-5.652-2.276A7.58,7.58,0,0,1-247.824-81.64ZM-233.38,0h-13.031V-58.875h13.031Zm26.219-97.183h13.031v36.9h15.386v12.717H-194.13V0h-13.031V-47.571h-13.188V-60.288h13.188Zm47.1,0h13.031v36.9h15.386v12.717h-15.386V0h-13.031V-47.571h-13.188V-60.288h13.188ZM-102.913,39.25h-13.031q5.024-9.891,9.891-19.625T-96.162,0l-29.673-58.875H-112.8Q-107-47.414-100.323-35.561A140.318,140.318,0,0,1-89.568-11.618q2.041-5.966,4.788-12.01t5.887-11.932q3.14-5.887,6.359-11.775t6.045-11.54h13.031q-12.4,24.649-24.728,49.063T-102.913,39.25Zm54.95-86.821V-60.288h10.048V-81.169a39.025,39.025,0,0,1,2.9-15.543,32.965,32.965,0,0,1,7.928-11.382,33.945,33.945,0,0,1,12.01-7.065A51.47,51.47,0,0,1-.079-117.907v12.4q-10.833.628-17.819,6.908t-6.987,17.9v20.41H-6.516v12.717H-24.885V0H-37.916V-47.571Zm85.094,0A18.607,18.607,0,0,0,26.3-44.431a16.972,16.972,0,0,0-6.437,8.164,25.482,25.482,0,0,0-1.1,5.5q7.379-2.669,14.679-5.417T48.12-41.6a19.2,19.2,0,0,0-4.945-4.317A11.528,11.528,0,0,0,37.13-47.571ZM64.762-34.226Q54.086-30.3,43.489-26.376t-21.273,7.85a16.92,16.92,0,0,0,6.2,5.26A18.9,18.9,0,0,0,37.13-11.3a15.65,15.65,0,0,0,11.932-5.024l8.007,9.42A28.99,28.99,0,0,1,48.12-.785a27.119,27.119,0,0,1-10.99,2.2A31.2,31.2,0,0,1,24.806-1.021a31.171,31.171,0,0,1-9.969-6.672,31.662,31.662,0,0,1-6.672-9.813A29.684,29.684,0,0,1,5.73-29.516,29.855,29.855,0,0,1,8.164-41.448a30.483,30.483,0,0,1,6.672-9.812,31.842,31.842,0,0,1,9.969-6.594A31.2,31.2,0,0,1,37.13-60.288a23.014,23.014,0,0,1,9.341,1.963,26.72,26.72,0,0,1,8.007,5.416,35.81,35.81,0,0,1,6.2,8.243A42.51,42.51,0,0,1,64.762-34.226Zm43.175-13.345A18.607,18.607,0,0,0,97.1-44.431a16.972,16.972,0,0,0-6.437,8.164,25.482,25.482,0,0,0-1.1,5.5q7.379-2.669,14.68-5.417T118.927-41.6a19.2,19.2,0,0,0-4.946-4.317A11.528,11.528,0,0,0,107.938-47.571Zm27.632,13.345Q124.894-30.3,114.3-26.376t-21.273,7.85a16.92,16.92,0,0,0,6.2,5.26,18.9,18.9,0,0,0,8.714,1.962,15.65,15.65,0,0,0,11.932-5.024l8.007,9.42a28.99,28.99,0,0,1-8.949,6.123,27.119,27.119,0,0,1-10.99,2.2A31.2,31.2,0,0,1,95.613-1.021a31.171,31.171,0,0,1-9.97-6.672,31.662,31.662,0,0,1-6.672-9.813,29.684,29.684,0,0,1-2.434-12.01,29.855,29.855,0,0,1,2.434-11.932,30.483,30.483,0,0,1,6.672-9.812,31.842,31.842,0,0,1,9.97-6.594,31.2,31.2,0,0,1,12.325-2.434,23.014,23.014,0,0,1,9.341,1.963,26.721,26.721,0,0,1,8.007,5.416,35.81,35.81,0,0,1,6.2,8.243A42.511,42.511,0,0,1,135.569-34.226Zm27,4.71a17.885,17.885,0,0,0,5.1,12.952q5.1,5.26,13.266,5.259t13.267-5.259a17.885,17.885,0,0,0,5.1-12.952,17.549,17.549,0,0,0-5.1-12.953q-5.1-5.1-13.267-5.1t-13.266,5.1A17.549,17.549,0,0,0,162.574-29.516Zm-13.188,0a29.3,29.3,0,0,1,2.434-11.854,31.662,31.662,0,0,1,6.673-9.812,30.951,30.951,0,0,1,10.048-6.673,31.772,31.772,0,0,1,12.4-2.434,25.188,25.188,0,0,1,7.85,1.178,35.389,35.389,0,0,1,6.28,2.669,26.894,26.894,0,0,1,4.239,2.826q1.57,1.335,1.57,1.806a23.129,23.129,0,0,0-.785-2.512,23.126,23.126,0,0,1-.785-2.512V-117.75h13.031V0H200.882V-6.437q0,.471-1.413,1.727a20.339,20.339,0,0,1-3.925,2.59,34.059,34.059,0,0,1-6.2,2.434,29.435,29.435,0,0,1-8.4,1.1,31.772,31.772,0,0,1-12.4-2.434,30.951,30.951,0,0,1-10.048-6.672,31.407,31.407,0,0,1-6.673-9.891A29.855,29.855,0,0,1,149.385-29.516ZM229.77-8.164a7.825,7.825,0,0,1,2.512-5.966,8.058,8.058,0,0,1,5.652-2.355,7.886,7.886,0,0,1,5.495,2.355,7.825,7.825,0,0,1,2.512,5.966,7.58,7.58,0,0,1-2.512,5.888A8.022,8.022,0,0,1,237.934,0a8.2,8.2,0,0,1-5.652-2.276A7.58,7.58,0,0,1,229.77-8.164Zm37.366-89.019h13.031v36.9h15.386v12.717H280.167V0H267.135V-47.571H253.948V-60.288h13.188ZM340.612,3.611q-8.478-15.7-16.956-31.243T306.7-58.875H319.73q2.512,4.71,5.495,9.734t5.888,10.048q2.9,5.024,5.338,10.126a96.143,96.143,0,0,1,4.161,10.126,70.673,70.673,0,0,1,4.082-10.126q2.512-5.1,5.417-10.126l5.809-10.048q2.9-5.024,5.573-9.734h13.031q-8.478,15.7-16.956,31.243T340.612,3.611Z" transform="translate(368.243 117.907)"/>
-</svg>
+  </head>
 
-                </div>
-                <div class="col s12">
-                    <a href="https://www.wittyfeed.tv" class="btn" style="background-color: #ffffff;color: #0a1128;border: solid 1px #0a1138;border-radius: 20px;font-size: 1.7rem;padding: 30px 15px;line-height: 3px;display: inline-block;"> VISIT NOW </a>
-                </div>
-                <div class="rocket show-on-large hide-on-small-only" style="position: absolute;width: 300px;height: 263px;right: -302px;bottom: -4px;background-image: url('https://cdn.wittyfeed.com/assets_pwa_new/images/rocket.gif');background-size: contain;">
-                </div>
-            </div>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <div id="form-outer">
+      <p id="description">
+        Let us know how we can improve freeCodeCamp
+      </p>
+      <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+        <div class="rowTab">
+          <div class="labels">
+            <label id="name-label" for="name">* Name: </label>
+          </div>
+          <div class="rightTab">
+            <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+          </div>
         </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label id="email-label" for="email">* Email: </label>
+          </div>
+          <div class="rightTab">
+            <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label id="number-label" for="age">* Age: </label>
+          </div>
+          <div class="rightTab">
+            <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label for="currentPos">Which option best describes your current role?</label>
+          </div>
+          <div class="rightTab">
+            <select id="dropdown" name="currentPos" class="dropdown">
+              <option disabled value>Select an option</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label for="userRating">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+          </div>
+          <div class="rightTab">
+            <ul style="list-style: none;">
+              <li class="radio"><label>Definitely<input name="radio-buttons" value="1" type="radio" class="userRatings"></label></li>
+              <li class="radio"><label>Maybe<input name="radio-buttons" value="2" type="radio" class="userRatings"></label></li>
+              <li class="radio"><label>Not sure<input name="radio-buttons" value="3" type="radio" class="userRatings"></label></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label for="most-like">What do you like most in FCC: </label>
+          </div>
+          <div class="rightTab">
+            <select id="most-like" name="mostLike" class="dropdown">
+              <option disabled selected value>Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="openSource">Open Source</option>
+            </select>
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label for="preferences">Things that should be improved in the future<br>(Check all that apply): </label>
+          </div>
+          <div class="rightTab">
+            <ul id="preferences" style="list-style: none;">
+              <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label></li>
+              <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects</li>
+              <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Data Visualization</label></li>
+              <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Challenges</label></li>
+              <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Open Source Community</label></li>
+              <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Gitter help rooms</label></li>
+              <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Videos</label></li>
+              <li class="checkbox"><label><input name="prefer" value="8" type="checkbox" class="userRatings">City Meetups</label></li>
+              <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Wiki</label></li>
+              <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Forum</label></li>
+              <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Additional Courses</label></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rowTab">
+          <div class="labels">
+            <label for="comments">Any Comments or Suggestions?</label>
+          </div>
+          <div class="rightTab">
+            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+          </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+      </form>
     </div>
-</body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      const projectName = 'survey-form';
+      localStorage.setItem('example_project', 'Survey Form');
+    </script>
+  </body>
+
 </html>
