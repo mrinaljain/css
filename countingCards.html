@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    var count = 0;
+
+    function cc(card) {
+      // Only change code below this line
+      switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+          count = count + 1;
+          break;
+        case 7:
+        case 8:
+        case 9:
+          count = 0;
+          break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+          count = count - 1;
+          break;
+      }
+      if (count > 0) {
+        console.log(count + " Bet");
+      } else if (count <= 0) {
+        console.log(count + " Hold");
+      }
+    }
+    cc(2);
+    cc("J");
+    cc(9);
+    cc(2);
+    cc(7);
+  </script>
+
+</html>

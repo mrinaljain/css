@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+
+  </body>
+  <script>
+    //Characters inside strings cnot be changed
+    //var something = "lol";
+    //console.log(something);
+    //var one = something[0];
+    //console.log(one);
+    //something[0] = 'p';
+    //console.log(something);
+    // function nextInLine(arr, item) {
+    //   arr.push(item);
+    //   arr.pop();
+    //   return arr;
+    // }
+
+    // Test Setup
+    function nextInLine(arr, item) {
+      // Your code here
+      arr.push(item);
+      arr.shift();
+      return item; // Change this line
+    }
+
+    // Test Setup
+    var testArr = [2];
+
+    // Display Code
+    console.log("Before: " + JSON.stringify(testArr));
+    console.log(nextInLine(testArr, 1)); // Modify this line to test
+    console.log("After: " + JSON.stringify(testArr));
+  </script>
+
+</html>

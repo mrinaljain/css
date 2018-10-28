@@ -9,28 +9,25 @@
   <body>
 
   </body>
-  <script>
-    //Characters inside strings cnot be changed
-    //var something = "lol";
-    //console.log(something);
-    //var one = something[0];
-    //console.log(one);
-    //something[0] = 'p';
-    //console.log(something);
+  <script type="text/javascript">
+    // Setup
+    var myObj = {
+      gift: "pony",
+      pet: "kitten",
+      bed: "sleigh"
+    };
+    var gift = "lol";
+    console.log(myObj.hasOwnProperty(gift));
 
+    function checkObj(checkProp) {
+      if (myObj.hasOwnProperty(checkProp) == true) {
+        console.log(myObj.checkProp);
+      };
+      console.log("Not Found");
+    }
 
-
-    // Example
-    var ourArray = ["Stimpson", "J", "cat"];
-    ourArray.push(["happy", "joy"]);
-
-    var myArray = [
-      ["John", 23],
-      ["cat", 2]
-    ];
-
-    // Only change code below this line.
-    myArray.push("dog 3")
+    // Test your code by modifying these values
+    //checkObj("gift");
   </script>
 
 </html>
